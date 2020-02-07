@@ -14,17 +14,43 @@ class MainActivity : AppCompatActivity() {
 
         infoTextView.visibility = View.INVISIBLE
 
-        calcButton.setOnClickListener {
-            // bill?, tip?, tip, total, display visible with results
-            val bill = billEditText.text.toString().toDouble()
-            // tip?
-            val tipPercentage = tipEditText.text.toString().toDouble()/100
-            val tip = bill * tipPercentage
-            val total = bill + tip
+        calcButtonBad.setOnClickListener {
+            val bill2 = billEditText.text.toString().toDouble()
+
+            val tip2 = bill2 * .10
+            val total2 = bill2 + tip2
 
             infoTextView.visibility = View.VISIBLE
-            infoTextView.text = "Tip: ${doubleToDollar(tip)} Total: ${doubleToDollar(total)}"
+            infoTextView.text = "Tip: ${doubleToDollar(tip2)} Total: ${doubleToDollar(total2)}"
         }
+        calcButtonDecent.setOnClickListener {
+            val bill2 = billEditText.text.toString().toDouble()
+
+            val tip2 = bill2 * .15
+            val total2 = bill2 + tip2
+
+            infoTextView.visibility = View.VISIBLE
+            infoTextView.text = "Tip: ${doubleToDollar(tip2)} Total: ${doubleToDollar(total2)}"
+        }
+        calcButtonGood.setOnClickListener {
+            val bill2 = billEditText.text.toString().toDouble()
+
+            val tip2 = bill2 * .20
+            val total2 = bill2 + tip2
+
+            infoTextView.visibility = View.VISIBLE
+            infoTextView.text = "Tip: ${doubleToDollar(tip2)} Total: ${doubleToDollar(total2)}"
+        }
+        calcButtonGreat.setOnClickListener {
+            val bill2 = billEditText.text.toString().toDouble()
+
+            val tip2 = bill2 * .25
+            val total2 = bill2 + tip2
+
+            infoTextView.visibility = View.VISIBLE
+            infoTextView.text = "Tip: ${doubleToDollar(tip2)} Total: ${doubleToDollar(total2)}"
+        }
+
 
     }
 
